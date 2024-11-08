@@ -37,8 +37,8 @@ Antes de iniciar a instalação, verifique se você possui os seguintes software
 Passos para Instalação
 
 1. Clone o Repositório:
-   git clone https://github.com/JMafuso/sinistro-odonto.git
-   cd sinistro-odonto
+   git clone https://github.com/JMafuso/sinistroOdontoApp.git
+   cd sinistroOdontoApp
 
 2. Restaure as Dependências:
 
@@ -57,7 +57,7 @@ Passos para Instalação
    Ou, se estiver utilizando o SQLite, a configuração será algo como:
 
    "ConnectionStrings": {
-       "DefaultConnection": "Data Source=sinistro_odonto.db;"
+       "DefaultConnection": "Data Source=sinistroOdontoApp.db;"
    }
 
 4. Executar as Migrações (Se necessário):
