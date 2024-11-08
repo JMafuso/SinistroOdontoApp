@@ -1,0 +1,25 @@
+﻿@model SinistroOdontoApp.ViewModels.IdentificarSintomasViewModel
+
+@{
+    ViewData["Title"] = "Detalhes do Sintoma";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <p><strong>Sintomas:</strong> @Model.Sintomas</p>
+
+    @if (Model.Resposta != null)
+    {
+        <h3>Resultado da Identificação</h3>
+        <p><strong>Doença:</strong> @Model.Resposta.Doenca</p>
+        <p><strong>Gravidade:</strong> @Model.Resposta.Gravidade</p>
+        <p><strong>Recomendação:</strong> @Model.Resposta.Recomendacao</p>
+    }
+    else
+    {
+        <p><em>Nenhum resultado identificado ainda.</em></p>
+    }
+</div>
+
+<a href="@Url.Action("Index", "Sintomas")" class="btn btn-secondary">Voltar</a>

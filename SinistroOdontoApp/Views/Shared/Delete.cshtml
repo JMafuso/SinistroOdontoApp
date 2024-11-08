@@ -1,0 +1,15 @@
+﻿@model SinistroOdontoApp.ViewModels.IdentificarSintomasViewModel
+
+@{
+    ViewData["Title"] = "Excluir Sintoma";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>Tem certeza de que deseja excluir o sintoma: <strong>@Model.Sintomas</strong>?</p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Sintomas" />
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a href="@Url.Action("Index", "Sintomas")" class="btn btn-secondary">Cancelar</a>
+</form>

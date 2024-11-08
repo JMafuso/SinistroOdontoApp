@@ -1,0 +1,16 @@
+﻿@model SinistroOdontoApp.ViewModels.IdentificarSintomasViewModel
+
+@{
+    ViewData["Title"] = "Adicionar Sintoma";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="Sintomas">Sintomas:</label>
+        <input asp-for="Sintomas" class="form-control" />
+        <span asp-validation-for="Sintomas" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
